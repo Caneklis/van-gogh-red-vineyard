@@ -1,0 +1,64 @@
+.about {
+  background-color: #d3b456;
+  color: #000;
+}
+
+.about__wrapper {
+  @include wrapper;
+  padding-top: 75px;
+  padding-bottom: 100px;
+}
+
+.about__text {
+  max-width: 1045px;
+  margin: 0 auto;
+  margin-bottom: 75px;
+  font-size: 30px;
+  line-height: 39px;
+  text-align: center;
+
+  &--wide {
+    max-width: 1280px;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+.about__slogan {
+  max-width: 1465px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  padding-top: 245px;
+  padding-bottom: 260px;
+  padding-left: 18.4%;
+  padding-right: 14%;
+  background-image: url("../images/about-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 28px;
+
+  h2 {
+    margin: 0;
+    font-family: "akzidenz-grotesk_proMdEx";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 64px;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+
+  @media (max-width: 1023px) {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 45px;
+    padding-bottom: 60px;
+
+    h2 {
+      font-size: 35px;
+      line-height: 1.2;
+    }
+  }
+}

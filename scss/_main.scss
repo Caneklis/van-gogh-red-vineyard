@@ -1,0 +1,31 @@
+* {
+  outline: 0;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #622333;
+  font-family: "Akzidenz-Grotesk Pro";
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

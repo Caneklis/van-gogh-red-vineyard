@@ -1,0 +1,104 @@
+.video {
+  background-color: #d3b456;
+}
+
+.video__wrapper {
+  @include wrapper;
+  padding-top: 60px;
+  padding-bottom: 190px;
+}
+
+.video__title {
+  display: flex;
+  justify-content: center;
+}
+
+.video__text {
+  max-width: 1090px;
+  margin: 0 auto;
+  font-family: "Akzidenz-Grotesk Pro Light";
+  font-size: 30px;
+  line-height: 39px;
+  text-align: center;
+
+  color: #000000;
+}
+
+.video__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 10%;
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.video__list-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 45%;
+  margin-bottom: 30px;
+
+  @media (max-width: 767px) {
+    width: 100%;
+  }
+}
+
+.video__list-play-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 96px;
+  height: 96px;
+  background-color: #e9daab;
+  background-image: url("../images/play-button.svg");
+  background-repeat: no-repeat;
+  background-position-x: 60%;
+  background-position-y: center;
+  background-size: 60px;
+  border-radius: 50%;
+
+  @media (max-width: 767px) {
+    width: 40px;
+    height: 40px;
+    background-size: 20px;
+  }
+}
+
+.video__list-text {
+  width: 256px;
+  padding-left: 30px;
+  font-size: 20px;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: #000000;
+
+  p {
+    margin: 0;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 14px;
+    line-height: 20px;
+    padding-right: 20px;
+  }
+}
+
+.video__list-photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+
+  @media (max-width: 767px) {
+    margin-bottom: 25px;
+  }
+}
