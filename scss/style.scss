@@ -1,4 +1,5 @@
 @import "swiper-bundle";
+@import "fancybox";
 @import "mixins";
 @import "main";
 @import "fonts";
@@ -8,15 +9,32 @@
 @import "video";
 
 .logo {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 75px;
-  padding-right: 75px;
-  margin-bottom: 37px;
+  max-width: 1080px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  // padding-left: 75px;
+  // padding-right: 75px;
+  // margin-bottom: 37px;
 
   @media (max-width: 1023px) {
     padding: 0;
     gap: 40px;
+  }
+}
+
+.logo__video-link {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+
+  @media (max-width: 1023px) {
+    transform: translate(0, 0);
+    position: static;
   }
 }

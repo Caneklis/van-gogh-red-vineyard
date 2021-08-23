@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 
 <head>
   <meta charset="UTF-8">
@@ -8,22 +8,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body>
+<body class="page__body">
   <header class="header">
     <section class="promo">
       <div class="promo__wrapper">
         <div class="logo">
-          <a href="" class="logo__link"><img src="images/logo.svg" width="307" height="44"
+          <a href="" class="logo__link"><img src="images/logo.svg" width="413" height="60"
               alt="Логотип ГМИИ им. А.С. Пушкина"></a>
-          <a href="" class="logo__link"><img src="images/lg.svg" width="303" height="43" alt="Логотип LG Signature"></a>
+          <a class="logo__video-link" href="#video-section"><img src="images/video-link-icon.svg" width="160"
+              height="160" alt=""></a>
+          <a href="" class="logo__link"><img src="images/lg-new.svg" width="352" height="49"
+              alt="Логотип LG Signature"></a>
         </div>
         <div class="promo__content">
-          <picture>
+
+
+
+          <!-- <picture>
             <source srcset="images/promo-gif.webp" type="image/webp">
             <img src="images/promo-gif.gif" alt="Промо">
-          </picture>
+          </picture> -->
+          <video class="promo__video" poster="images/promo-poster.jpg" id="video1" preload="auto" loop muted
+            playsinline>
+            <source src="video/promo.mp4" type="video/mp4">>
+          </video>
         </div>
-        <h1 class="promo__title"><img src="images/main-title.svg" alt=""></h1>
+        <h1 class="promo__title">КРАСНЫЕ ВИНОГРАДНИКИ <br><span>В АРЛЕ</span></h1>
       </div>
     </section>
   </header>
@@ -47,7 +57,7 @@
             она будет изучена
             с использованием современных естественно-научных методов. </h2>
         </div>
-        <div class="about__text  about__text--wide">
+        <div class="about__text">
           <p>Картина «Красные виноградники в Арле» прошли две реставрации в стенах ГМИИ
             им. А.С. Пушкина, однако никогда прежде специалисты музея не имели возможности провести настолько
             всестороннее
@@ -59,24 +69,21 @@
 
     </section>
     <section class="how">
+      <div class="how__promo">
+        <p>Какими материалами <br>
+          и красками пользовался <br>
+          Ван Гог работая в Арле?</p>
+        <p>Как менялся композиционный <br>
+          замысел
+          картины в процессе ее <br>
+          создания? </p>
+        <p>Как Тео готовил картину<br>
+          для участия в выставке<br>
+          «Салон двадцати»?</p>
+        <p>Почему картина «Красные виноградники<br>
+          в Арле» практически не покидала стены <br>музея?</p>
+      </div>
       <div class="how__wrapper">
-        <div class="how__promo">
-          <p>Какими материалами <br>
-            и красками пользовался <br>
-            Ван Гог работая в Арле?</p>
-          <p>Как менялся <br>
-            композиционный замысел <br>
-            картины в процессе ее <br>
-            создания? </p>
-          <p>Как Тео готовил картину<br>
-            для участия в выставке<br>
-            «Салон двадцати»?</p>
-          <p>Почему картина «Красные виноградники<br>
-            в Арле» практически не покидала стены музея?</p>
-        </div>
-        <div class="how__title">
-          <img src="images/learn-more.svg" alt="">
-        </div>
         <div class="wrapper">
 
           <div id="container" class="slider-container">
@@ -85,14 +92,16 @@
         </div>
       </div>
 
-      <div class="">
+      <div class="how__slider-wrapper">
         <!-- Swiper -->
         <div class="swiper-container  how__slider mySwiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide  how__slider-slide"
               style="background-image: url(images/slider/slide-1-bg.png); background-position-x: right; background-position-y: 70px;">
               <div class="how__slider-num">
-                <img src="images/numbers/1.svg" loading="lazy" alt="">
+                1
+                <a class="how__slider-video-link" data-fancybox="video" data-src="video/person-3.mp4"
+                  href="video/person-3.mp4"><img src="images/slider-play-icon.svg" alt=""></a>
               </div>
               <h3 class="how__slider-title">
                 Арль на заднем плане
@@ -137,7 +146,9 @@
             </div>
             <div class="swiper-slide  how__slider-slide">
               <div class="how__slider-num">
-                <img src="images/numbers/2.svg" loading="lazy" alt="">
+                2
+                <a class="how__slider-video-link" data-fancybox="video" data-src="video/person-3.mp4"
+                  href="video/person-3.mp4"><img src="images/slider-play-icon.svg" alt=""></a>
               </div>
               <h3 class="how__slider-title">
                 Завышенная линия горизонта
@@ -152,15 +163,34 @@
                   пейзажа 1888-1890 годов, на которых также можно заметить этот прием завышенной линии горизонта.
                 </p>
                 <ul>
-                  <li><img src="images/slider/slide-2-pic-1.jpg" loading="lazy" alt=""></li>
-                  <li><img src="images/slider/slide-2-pic-2.jpg" loading="lazy" alt=""></li>
+                  <li>
+                    <a data-fancybox="single" data-src="images/slider/slide-2-pic-1-full.jpg"
+                      href="images/slider/slide-2-pic-1-full.jpg">
+                      <img src="images/slider/slide-2-pic-1.jpg" loading="lazy" alt="">
+                    </a>
+                    <p>Пейзаж в Овере после Дождя. 1890<br>
+                      (Пейзаж с повозкой и поездом). <br>
+                      Холст, масло. 72×90
+                    </p>
+                  </li>
+                  <li>
+                    <a data-fancybox="single" data-src="images/slider/slide-2-pic-2-full.jpg"
+                      href="images/slider/slide-2-pic-2-full.jpg">
+                      <img src="images/slider/slide-2-pic-2.jpg" loading="lazy" alt="">
+                    </a>
+                    <p>Море в Сент-Мари. 1888<br>
+                      Холст, масло. 44×53
+                    </p>
+                  </li>
                 </ul>
               </div>
             </div>
             <div class="swiper-slide  how__slider-slide"
               style="background-image: url(images/slider/slide-3-bg.png); background-position-x: center; background-position-y: top;">
               <div class="how__slider-num">
-                <img src="images/numbers/3.svg" loading="lazy" alt="">
+                3
+                <a class="how__slider-video-link" data-fancybox="video" data-src="video/person-3.mp4"
+                  href="video/person-3.mp4"><img src="images/slider-play-icon.svg" alt=""></a>
               </div>
               <h3 class="how__slider-title">
                 солнце
@@ -183,7 +213,7 @@
             <div class="swiper-slide  how__slider-slide">
               <div class="how__slider-num">
                 <img src="images/slider/slide-4-bg.png" alt="" style="position: absolute;top: 0;left: 0;z-index: -1;">
-                <img src="images/numbers/4.svg" loading="lazy" alt="">
+                4
               </div>
               <h3 class="how__slider-title">
                 Женщина с зонтиком
@@ -197,30 +227,47 @@
                   зонтиком. Сама же женщина с зонтиком, вероятно, является главной среди сборщиц винограда, а зонт может
                   вызывать ассоциации с любимым художником японским искусством.
                 </p>
+                <ul>
+                  <li>
+                    <a data-fancybox="single" data-src="images/slider/slide-4-pic-1.jpg"
+                      href="images/slider/slide-4-pic-1.jpg">
+                      <img src="images/slider/slide-4-pic-1.png" loading="lazy" alt="">
+                    </a>
+                    <p>Макрофотография красочного слоя
+                    </p>
+                  </li>
+                </ul>
               </div>
             </div>
             <div class="swiper-slide  how__slider-slide">
               <div class="how__slider-num">
-                <img src="images/numbers/5.svg" loading="lazy" alt="">
+                5
               </div>
               <h3 class="how__slider-title">
                 Женщина с корзиной в центре
               </h3>
               <div class="how__slider-text">
-                <p>Поскольку Винсент Ван Гог на пленэре работал быстро, очень часто детали работы дополнялись спустя
-                  какое-то время, возможно, даже уже в студии. Так, ренгтенограмма «Красных виноградников в Арле»
-                  показывает, что мужчина, стоящий на дороге, на самом деле был женщиной — на снимке четко видна юбка,
-                  белая блузка и некое подобие шляпки. О причинах такого решения автора можно только догадываться.
-                </p>
-                <img src="images/slider/slide-5-pic-1.jpg" loading="lazy" alt="">
-                <p>А центральная фигура согбенной женщины с корзиной на переднем плане была добавлена уже после того,
-                  как был написан виноградник — сквозь тонкий слой синей краски в нескольких местах просвечивает
-                  полыхающий красный. </p>
+                <div class="how__slide-grid">
+                  <p>Поскольку Винсент Ван Гог на пленэре работал быстро, очень часто детали работы дополнялись спустя
+                    какое-то время, возможно, даже уже в студии. Так, ренгтенограмма «Красных виноградников в Арле»
+                    показывает, что мужчина, стоящий на дороге, на самом деле был женщиной — на снимке четко видна юбка,
+                    белая блузка и некое подобие шляпки. О причинах такого решения автора можно только догадываться.
+                  </p>
+                  <img src="images/slider/slide-5-pic-1.jpg" loading="lazy" alt="">
+                  <img src="images/slider/slide-5-pic-2.png" alt="">
+                  <p>А центральная фигура согбенной женщины с корзиной
+                    на
+                    переднем плане была добавлена уже после того,
+                    как был написан виноградник — сквозь тонкий слой синей краски в нескольких местах просвечивает
+                    полыхающий красный.
+                  </p>
+                </div>
+
               </div>
             </div>
             <div class="swiper-slide  how__slider-slide">
               <div class="how__slider-num">
-                <img src="images/numbers/6.svg" loading="lazy" alt="">
+                6
               </div>
               <h3 class="how__slider-title">
                 Деревья
@@ -246,7 +293,7 @@
             <div class="swiper-slide  how__slider-slide"
               style="background-image: url(images/slider/slide-7-bg.png); background-size: contain;background-position: center center;">
               <div class="how__slider-num">
-                <img src="images/numbers/7.svg" loading="lazy" alt="">
+                7
               </div>
               <h3 class="how__slider-title">
                 Красный виноградник
@@ -265,9 +312,9 @@
             </div>
             <div class="swiper-slide  how__slider-slide">
               <div class="how__slider-num">
-                <img src="images/numbers/8.svg" alt="">
-                <img src="images/slider/slide-8-pic-1.jpg" loading="lazy" alt=""
-                  style="position: absolute;bottom: -30%;left: 0;z-index: -1;">
+                8
+                <img src="images/slider/slide-8-pic-1.png" loading="lazy" alt=""
+                  style="position: absolute;top: -10%;left: 0;z-index: -1;">
               </div>
               <h3 class="how__slider-title">
                 Женщина в белом платке справа на дороге
@@ -308,49 +355,138 @@
       </div>
     </section>
 
-    <section class="video">
+    <section class="video" id="video-section">
       <div class="video__wrapper">
-        <h2 class="video__title"><img src="images/video-title.svg" loading="lazy" alt=""></h2>
         <div class="video__text">
-          <p>На все вопросы мы ищем ответы на ваших глазах. У есть возможность заглянуть в настоящие реставрационные
+          <p>На все вопросы мы ищем ответы на ваших глазах. У есть возможность заглянуть в реставрационные
             мастерские музея и увидеть, как картина проходит все этапы исследования. А главное, специалистам Пушкинского
             музея предстоит решить, какие шаги предпринять дальше для сохранения отчаянно хрупких, но невероятно важных
             «Красных виноградников в Арле» для будущих поколений. </p>
         </div>
-        <ul class="video__list">
-          <li class="video__list-item">
-            <div class="video__list-photo"><img src="images/person-1.jpg" loading="lazy" alt=""></div>
-            <div class="video__list-text">
-              <p>приветственное слово
-                марины лошак</p>
+        <div class="video__slider  swiper-container">
+          <div class="swiper-wrapper">
+            <div class="video__slider-item  swiper-slide">
+              <ul class="video__list">
+                <li class="video__list-item">
+                  <div class="video__list-photo">
+                    <div class="video__list-photo-wrapper">
+                      <img src="images/person-1.jpg" loading="lazy" alt="">
+                    </div>
+                    <a class="video__list-play-btn" data-fancybox="video-gallery" data-src="video/person-1.mp4"
+                      href="video/person-1.mp4">
+                    </a>
+                  </div>
+                  <div class="video__list-text">
+                    <p>приветственное слово
+                      марины лошак</p>
+                  </div>
+                </li>
+                <li class="video__list-item">
+                  <div class="video__list-photo">
+                    <div class="video__list-photo-wrapper">
+                      <img src="images/person-2.jpg" loading="lazy" alt="">
+                    </div>
+                    <a class="video__list-play-btn" data-fancybox="video-gallery" data-src="video/person-3.mp4"
+                      href="video/person-3.mp4">
+                    </a>
+                  </div>
+                  <div class="video__list-text">
+                    <p>приветственное слово г-нА <br>
+                      ЕнгНам Ро
+                    </p>
+                  </div>
+                </li>
+                <li class="video__list-item">
+                  <div class="video__list-photo">
+                    <div class="video__list-photo-wrapper">
+                      <img src="images/person-3.jpg" loading="lazy" alt="">
+                    </div>
+                    <a class="video__list-play-btn" data-fancybox="video-gallery" data-src="video/person-3.mp4"
+                      href="video/person-3.mp4">
+                    </a>
+                  </div>
+                  <div class="video__list-text">
+                    <p>приветственное слово <br>
+                      Сати Спиваковой
+                    </p>
+                  </div>
+                </li>
+              </ul>
+              <div class="video__slider-item-number">
+                <p>серия об истории <br>создания картины</p>
+              </div>
             </div>
-            <a class="video__list-play-btn" href="#">
-              <!-- <img src="images/play-button.svg" width="96" alt=""> -->
-            </a>
-          </li>
-          <li class="video__list-item">
-            <div class="video__list-photo"><img src="images/person-2.jpg" loading="lazy" alt=""></div>
-            <div class="video__list-text">
-              <p>приветственное слово г-нА <br>
-                ЕнгНам Ро
-              </p>
+            <div class="video__slider-item  swiper-slide">
+              <ul class="video__list">
+                <li class="video__list-item">
+                  <div class="video__list-photo">
+                    <div class="video__list-photo-wrapper">
+                      <img src="images/person-1.jpg" loading="lazy" alt="">
+                    </div>
+                    <a class="video__list-play-btn" data-fancybox="video-gallery" data-src="video/person-1.mp4"
+                      href="video/person-1.mp4">
+                    </a>
+                  </div>
+                  <div class="video__list-text">
+                    <p>приветственное слово
+                      марины лошак</p>
+                  </div>
+                </li>
+                <li class="video__list-item">
+                  <div class="video__list-photo">
+                    <div class="video__list-photo-wrapper">
+                      <img src="images/person-2.jpg" loading="lazy" alt="">
+                    </div>
+                    <a class="video__list-play-btn" data-fancybox="video-gallery" data-src="video/person-3.mp4"
+                      href="video/person-3.mp4">
+                    </a>
+                  </div>
+                  <div class="video__list-text">
+                    <p>приветственное слово г-нА <br>
+                      ЕнгНам Ро
+                    </p>
+                  </div>
+                </li>
+                <li class="video__list-item">
+                  <div class="video__list-photo">
+                    <div class="video__list-photo-wrapper">
+                      <img src="images/person-3.jpg" loading="lazy" alt="">
+                    </div>
+                    <a class="video__list-play-btn" data-fancybox="video-gallery" data-src="video/person-3.mp4"
+                      href="video/person-3.mp4">
+                    </a>
+                  </div>
+                  <div class="video__list-text">
+                    <p>приветственное слово <br>
+                      Сати Спиваковой
+                    </p>
+                  </div>
+                </li>
+              </ul>
+              <div class="video__slider-item-number">
+                <p>Тут будет еще <br>какой-то текст</p>
+              </div>
             </div>
-            <a class="video__list-play-btn" href="#">
-              <!-- <img src="images/play-button.svg" width="96" alt=""> -->
-            </a>
-          </li>
-          <li class="video__list-item">
-            <div class="video__list-photo"><img src="images/person-3.jpg" loading="lazy" alt=""></div>
-            <div class="video__list-text">
-              <p>приветственное слово <br>
-                Сати Спиваковой
-              </p>
-            </div>
-            <a class="video__list-play-btn" href="#">
-              <!-- <img src="images/play-button.svg" width="96" alt=""> -->
-            </a>
-          </li>
-        </ul>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"><svg width="73" height="73" viewBox="0 0 73 73" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <circle cx="36.5" cy="36.5" r="35.5" stroke="white" stroke-width="2" />
+              <path
+                d="M60.2158 38.1901C60.8016 37.6043 60.8016 36.6545 60.2158 36.0687L50.6699 26.5228C50.0841 25.937 49.1343 25.937 48.5486 26.5228C47.9628 27.1086 47.9628 28.0583 48.5486 28.6441L57.0338 37.1294L48.5486 45.6147C47.9628 46.2005 47.9628 47.1502 48.5486 47.736C49.1343 48.3218 50.0841 48.3218 50.6699 47.736L60.2158 38.1901ZM14.4741 38.6294H59.1552V35.6294H14.4741V38.6294Z"
+                fill="#FFCE70" />
+            </svg>
+          </div>
+          <div class="swiper-button-prev"><svg width="73" height="73" viewBox="0 0 73 73" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <circle r="35.5" transform="matrix(-1 0 0 1 36.5 36.5)" stroke="white" stroke-width="2" />
+              <path
+                d="M12.7842 38.1901C12.1984 37.6043 12.1984 36.6545 12.7842 36.0687L22.3301 26.5228C22.9159 25.937 23.8657 25.937 24.4514 26.5228C25.0372 27.1086 25.0372 28.0583 24.4514 28.6441L15.9662 37.1294L24.4514 45.6147C25.0372 46.2005 25.0372 47.1502 24.4514 47.736C23.8657 48.3218 22.9159 48.3218 22.3301 47.736L12.7842 38.1901ZM58.5259 38.6294H13.8448V35.6294H58.5259V38.6294Z"
+                fill="#FFCE70" />
+            </svg>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -361,6 +497,7 @@
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
   <script src='https://openseadragon.github.io/openseadragon/openseadragon.js'></script>
   <script src="js/swiper-bundle.js"></script>
+  <script src="js/fancybox.umd.js"></script>
   <script src="js/script.js"></script>
 
 </body>
