@@ -1894,7 +1894,7 @@ img {
 }
 
 .promo {
-  padding: 0 0 110px;
+  padding: 0 0 40px;
   background-color: #ab8f50;
   background-image: url("../images/promo-bg.jpg");
   background-repeat: no-repeat;
@@ -1928,10 +1928,15 @@ img {
   position: relative;
 }
 
+@media (max-width: 1599px) {
+  .promo__wrapper {
+    padding-top: 50px;
+  }
+}
+
 @media (max-width: 960px) {
   .promo__wrapper {
     padding-bottom: 90px;
-    padding-top: 50px;
   }
 }
 
@@ -1949,13 +1954,19 @@ img {
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
-  max-width: 1175px;
+  max-width: 1075px;
   margin: 0 auto;
+}
+
+@media (max-width: 1599px) {
+  .promo__content {
+    max-width: 780px;
+  }
 }
 
 .promo__title {
   position: absolute;
-  top: 63%;
+  top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -1977,12 +1988,21 @@ img {
   font-size: 100px;
 }
 
-@media (max-width: 1439px) {
+@media (max-width: 1599px) {
   .promo__title {
     font-size: 110px;
   }
   .promo__title span {
     font-size: 80px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .promo__title {
+    font-size: 70px;
+  }
+  .promo__title span {
+    font-size: 60px;
   }
 }
 
@@ -2021,17 +2041,8 @@ img {
   display: block;
   width: 100%;
   height: auto;
-  border: 120px solid transparent;
-  -o-border-image: url("../images/frame.png") 142/120px 120px 120px 120px/0px 0px 0px 0px round;
-     border-image: url("../images/frame.png") 142/120px 120px 120px 120px/0px 0px 0px 0px round;
-}
-
-@media (max-width: 960px) {
-  .promo__video {
-    border: 40px solid transparent;
-    -o-border-image: url("../images/frame.png") 140/40px 40px 40px 40px/0px 0px 0px 0px round;
-       border-image: url("../images/frame.png") 140/40px 40px 40px 40px/0px 0px 0px 0px round;
-  }
+  -webkit-box-shadow: 0 0 15px 2px #000;
+          box-shadow: 0 0 15px 2px #000;
 }
 
 .promo__video-link {
@@ -2110,7 +2121,7 @@ img {
   .about__text {
     font-size: 20px;
     line-height: 29px;
-    max-width: 960px;
+    max-width: 780px;
   }
 }
 
@@ -2147,6 +2158,7 @@ img {
 
 @media (max-width: 1600px) {
   .about__slogan {
+    max-width: 960px;
     margin-top: 65px;
     margin-bottom: 65px;
   }
@@ -2215,6 +2227,23 @@ img {
 
 .how__promo p:last-child {
   margin-bottom: 0;
+}
+
+@media (max-width: 1599px) {
+  .how__promo {
+    max-width: 1070px;
+    font-size: 35px;
+    line-height: 38px;
+  }
+  .how__promo p {
+    margin-bottom: 35px;
+  }
+  .how__promo p:last-child {
+    margin-bottom: 0;
+  }
+  .how__promo p br {
+    display: none;
+  }
 }
 
 @media (max-width: 1023px) {
@@ -2300,6 +2329,14 @@ img {
   background-position: 128% 40px;
 }
 
+@media (max-width: 1599px) {
+  .how__slider {
+    max-width: 1400px;
+    background-position-x: center;
+    background-size: contain;
+  }
+}
+
 @media (max-width: 1023px) {
   .how__slider {
     background-image: none;
@@ -2364,7 +2401,7 @@ img {
   background-size: auto;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1439px) {
   .how__slider-slide:nth-child(6) .how__slider-text {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2377,6 +2414,10 @@ img {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
+    padding-right: 30px;
+  }
+  .how__slider-slide:nth-child(6) .how__slider-text img {
+    max-width: 50%;
   }
 }
 
@@ -2915,7 +2956,7 @@ img {
 }
 
 .video__slider-item-number {
-  min-height: 542px;
+  min-height: 480px;
   max-width: 960px;
   margin: 0 auto;
   display: -webkit-box;
@@ -3068,12 +3109,28 @@ img {
 }
 
 .logo__video-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   z-index: 2;
+}
+
+@media (max-width: 1599px) {
+  .logo__video-link {
+    width: 120px;
+    height: 120px;
+  }
 }
 
 @media (max-width: 1023px) {

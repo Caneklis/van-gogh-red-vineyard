@@ -27,11 +27,19 @@
 }
 
 .logo__video-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
+
+  @media (max-width: 1599px) {
+    width: 120px;
+    height: 120px;
+  }
 
   @media (max-width: 1023px) {
     transform: translate(0, 0);

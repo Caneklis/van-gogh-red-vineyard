@@ -1,5 +1,5 @@
 .promo {
-  padding: 0 0 110px;
+  padding: 0 0 40px;
   background-color: #ab8f50;
   background-image: url("../images/promo-bg.jpg");
   background-repeat: no-repeat;
@@ -25,16 +25,14 @@
   // @include wrapper;
   padding-top: 150px;
   padding-bottom: 150px;
-  // background-color: #d3b456;
-  // background-image: url("../images/v6.jpg");
-  // background-size: 100%;
-  // background-repeat: no-repeat;
-  // border-radius: 20px;
   position: relative;
+
+  @media (max-width: 1599px) {
+    padding-top: 50px;
+  }
 
   @media (max-width: 960px) {
     padding-bottom: 90px;
-    padding-top: 50px;
   }
 
   @media (max-width: 767px) {
@@ -46,13 +44,29 @@
   display: flex;
   justify-content: center;
   position: relative;
-  max-width: 1175px;
+  max-width: 1075px;
   margin: 0 auto;
+
+  @media (max-width: 1599px) {
+    max-width: 780px;
+  }
+
+  // border: 120px solid transparent;
+
+  // border-image: url("../images/frame.png") 142 / /* slice */ 120px 120px 120px
+  //   120px / /* width */ 0px 0px 0px 0px /* outset */ round;
+
+  // @media (max-width: 960px) {
+  //   border: 40px solid transparent;
+
+  //   border-image: url("../images/frame.png") 140/40px 40px 40px 40px/0px 0px 0px
+  //     0px round;
+  // }
 }
 
 .promo__title {
   position: absolute;
-  top: 63%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   // max-width: 1800px;
@@ -74,11 +88,19 @@
     font-size: 100px;
   }
 
-  @media (max-width: 1439px) {
+  @media (max-width: 1599px) {
     font-size: 110px;
 
     span {
       font-size: 80px;
+    }
+  }
+
+  @media (max-width: 1400px) {
+    font-size: 70px;
+
+    span {
+      font-size: 60px;
     }
   }
 
@@ -119,18 +141,7 @@
   display: block;
   width: 100%;
   height: auto;
-
-  border: 120px solid transparent;
-
-  border-image: url("../images/frame.png") 142 / /* slice */ 120px 120px 120px
-    120px / /* width */ 0px 0px 0px 0px /* outset */ round;
-
-  @media (max-width: 960px) {
-    border: 40px solid transparent;
-
-    border-image: url("../images/frame.png") 140/40px 40px 40px 40px/0px 0px 0px
-      0px round;
-  }
+  box-shadow: 0 0 15px 2px #000;
 
   // &.frame {
   //   border-image: url("../images/frame.png") 142 / /* slice */ 120px 120px 120px
@@ -156,4 +167,20 @@
   &:hover {
     opacity: 0.6;
   }
+}
+
+.promo__video-wrapper {
+  // width: 100%;
+  // height: 0;
+  // padding-top: 56.97%;
+  // position: relative;
+  // overflow: hidden;
+
+  // video {
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   width: 100%;
+  //   height: 100%;
+  // }
 }

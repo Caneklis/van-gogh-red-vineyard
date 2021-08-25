@@ -45,7 +45,7 @@
   @media (max-width: 1600px) {
     font-size: 20px;
     line-height: 29px;
-    max-width: 960px;
+    max-width: 780px;
   }
 }
 
@@ -78,6 +78,7 @@
   }
 
   @media (max-width: 1600px) {
+    max-width: 960px;
     margin-top: 65px;
     margin-bottom: 65px;
     h2 {
