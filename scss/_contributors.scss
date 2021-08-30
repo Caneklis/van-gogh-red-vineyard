@@ -1,0 +1,58 @@
+.contributors {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 69px;
+  justify-content: center;
+  padding-bottom: 60px;
+  padding-top: 43px;
+  background-image: url("../images/how-bg.jpg");
+  // background-attachment: fixed;
+  background-size: contain;
+
+  @media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+    background-image: url("../images/how-bg@2x.jpg");
+  }
+
+  @media (max-width: 767px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.contributors__title {
+  grid-column: 1/-1;
+  margin: 0;
+  margin-bottom: 50px;
+  font-family: "resagokrregular";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 80px;
+  line-height: 87px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffce70;
+
+  @media (max-width: 767px) {
+    margin-bottom: 30px;
+    font-size: 30px;
+    line-height: 33px;
+  }
+}
+
+.contributors__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 30px;
+  line-height: 39px;
+  color: #ffffff;
+
+  &--left {
+    text-align: right;
+  }
+
+  @media (max-width: 767px) {
+    text-align: center;
+    font-size: 20px;
+    line-height: 26px;
+  }
+}

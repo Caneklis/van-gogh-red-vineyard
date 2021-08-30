@@ -1,0 +1,40 @@
+.copyright {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  column-gap: 69px;
+  padding-bottom: 100px;
+  background-image: url("../images/how-bg.jpg");
+  // background-attachment: fixed;
+  background-size: contain;
+
+  @media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+    background-image: url("../images/how-bg@2x.jpg");
+  }
+
+  @media (max-width: 767px) {
+    grid-template-columns: 1fr;
+    row-gap: 41px;
+  }
+}
+
+.copyright__link {
+  font-family: "resagokrregular";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 27px;
+  line-height: 29px;
+  text-align: center;
+  text-decoration: underline;
+  text-transform: uppercase;
+  color: #ffffff;
+
+  @media (max-width: 767px) {
+    font-size: 17px;
+    line-height: 18px;
+
+    &:nth-child(2) {
+      order: -1;
+    }
+  }
+}

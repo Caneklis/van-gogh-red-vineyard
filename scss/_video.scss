@@ -1,4 +1,5 @@
 .video {
+  padding-top: 60px;
   background-color: #d3b456;
   // background-image: url("../images/promo-bg.png");
   background-image: url("../images/video-bg.jpg");
@@ -17,11 +18,11 @@
 
 .video__wrapper {
   @include wrapper;
-  padding-top: 197px;
+  // padding-top: 197px;
   padding-bottom: 190px;
   background-image: url("../images/video-slider-bg.svg");
   background-repeat: no-repeat;
-  background-position: center top;
+  background-position: center -140px;
 
   @media (max-width: 1600px) {
     padding-left: 50px;
@@ -39,6 +40,22 @@
 .video__title {
   display: flex;
   justify-content: center;
+  margin: 0;
+  margin-bottom: 80px;
+  font-family: "resagokrbold";
+  font-weight: normal;
+  font-size: 80px;
+  line-height: 87px;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #ffffff;
+
+  @media (max-width: 767px) {
+    margin-bottom: 40px;
+    font-size: 30px;
+    line-height: 33px;
+  }
 }
 
 .video__text {
@@ -53,6 +70,11 @@
   @media (max-width: 1600px) {
     font-size: 20px;
     line-height: 29px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 17px;
+    line-height: 22px;
   }
 }
 
@@ -108,12 +130,11 @@
   }
 
   @media (max-width: 767px) {
-    width: 40px;
-    height: 40px;
-    background-size: 20px;
+    // background-size: 20px;
 
-    right: 0;
-    bottom: 0;
+    right: -55px;
+    bottom: 50%;
+    transform: translateY(50%);
   }
 }
 
@@ -133,9 +154,18 @@
   }
 
   @media (max-width: 767px) {
-    font-size: 14px;
-    line-height: 20px;
-    padding-right: 20px;
+    max-width: unset;
+    margin-bottom: 20px;
+    padding: 0;
+    font-size: 25px;
+    line-height: 27px;
+    text-transform: uppercase;
+    order: -1;
+    width: 100%;
+
+    br {
+      display: none;
+    }
   }
 }
 
@@ -187,9 +217,13 @@
     color: #ffffff;
 
     @media (max-width: 767px) {
-      font-size: 20px;
-      line-height: 1.1;
+      font-size: 30px;
+      line-height: 33px;
     }
+  }
+
+  @media (max-width: 767px) {
+    background-image: none;
   }
 }
 
@@ -220,6 +254,11 @@
     padding-right: 40px;
   }
 
+  @media (max-width: 767px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .swiper-pagination {
     .swiper-pagination-bullet {
       width: 15px;
@@ -237,6 +276,10 @@
 
   .video__slider-item {
     position: relative;
+
+    @media (min-width: 767px) {
+      width: 100%;
+    }
   }
 
   .video__slider-item::before {

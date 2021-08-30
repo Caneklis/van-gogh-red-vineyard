@@ -47,6 +47,13 @@
     line-height: 29px;
     max-width: 780px;
   }
+
+  @media (max-width: 767px) {
+    font-size: 17px;
+    line-height: 22px;
+    text-align: left;
+    padding-left: 40px;
+  }
 }
 
 .about__slogan {
@@ -88,14 +95,20 @@
   }
 
   @media (max-width: 1023px) {
-    padding-left: 5%;
-    padding-right: 5%;
+    margin-right: -20px;
+    margin-left: auto;
+    padding-left: 40px;
+    padding-right: 40px;
     padding-top: 45px;
     padding-bottom: 60px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+
+    background-image: url("../images/about-slogan-bg-mobile.png");
 
     h2 {
       font-size: 30px;
-      line-height: 1.2;
+      line-height: 33px;
     }
   }
 }

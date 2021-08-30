@@ -76,17 +76,22 @@
   }
 
   @media (max-width: 767px) {
-    margin-top: 0;
+    margin-top: -40px;
+    margin-left: 0;
+    margin-bottom: 45px;
+    padding-top: 30px;
     padding-right: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
+    padding-left: 30px;
     border-width: 40px;
-    border-image: url("../images/frame.png") 140/40px 40px 40px 40px/0px 10px
+    border-image: url("../images/frame-mobile.png") 90/60px 60px 60px 0/0px 10px
       10px 10px round;
-    font-size: 10px;
-    line-height: 14px;
+    font-size: 18px;
+    line-height: 20px;
+    text-align: left;
 
     p {
-      margin-bottom: 12px;
+      margin-bottom: 25px;
     }
   }
 }
@@ -96,10 +101,12 @@
   // margin: auto;
   padding-left: 150px;
   padding-right: 150px;
+  padding-bottom: 220px;
 
   @media (max-width: 1023px) {
     padding-left: 20px;
     padding-right: 20px;
+    padding-bottom: 30px;
   }
 }
 
@@ -169,6 +176,11 @@
     padding-right: 40px;
   }
 
+  @media (max-width: 767px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .swiper-pagination {
     .swiper-pagination-bullet {
       width: 15px;
@@ -212,6 +224,21 @@
 
   @media (max-width: 1023px) {
     grid-template-columns: 0.5fr 5fr;
+  }
+
+  @media (max-width: 767px) {
+    align-items: flex-end;
+    position: relative;
+    padding-right: 20px;
+
+    &:nth-child(1) {
+      background-position: center 70px !important;
+      background-size: 230px !important;
+    }
+
+    &:nth-child(3) {
+      background-size: 277px !important;
+    }
   }
 }
 
@@ -258,6 +285,16 @@
     padding-left: 0;
     font-size: 140px;
   }
+
+  @media (max-width: 1023px) {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    line-height: 0.7;
+  }
+
+  @media (max-width: 767px) {
+    position: static;
+  }
 }
 
 .how__slider-title {
@@ -277,6 +314,13 @@
   @media (max-width: 1023px) {
     font-size: 25px;
     line-height: 30px;
+  }
+
+  @media (max-width: 1023px) {
+    grid-row: 1/2;
+    grid-column: 2/3;
+    font-size: 30px;
+    line-height: 33px;
   }
 }
 
@@ -344,11 +388,17 @@
   }
 
   @media (max-width: 1023px) {
-    font-size: 15px;
-    line-height: 20px;
+    font-size: 17px;
+    line-height: 22px;
     padding-right: 5px;
     padding-left: 10px;
     padding-top: 20px;
+  }
+
+  @media (max-width: 767px) {
+    grid-row: 2/3;
+    grid-column: 1/-1;
+    padding-left: 40px;
   }
 }
 
@@ -360,6 +410,15 @@
   @media (max-width: 1023px) {
     left: 0;
     bottom: -45px;
+  }
+
+  @media (max-width: 767px) {
+    width: 108px;
+    height: 67px;
+    bottom: auto;
+    top: 0;
+    right: 20px;
+    left: auto;
   }
 }
 
