@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   var rightRect = new OpenSeadragon.Rect(0, 0, 0, 0);
 
   viewer.addTiledImage({
-    tileSource: "./dz/orig.dzi",
+    tileSource: "dz/orig.dzi",
     success: function (event) {
       leftImage = event.item;
       imagesLoaded();
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   });
 
   viewer.addTiledImage({
-    tileSource: "./dz/xray.dzi",
+    tileSource: "dz/xray.dzi",
     success: function (event) {
       rightImage = event.item;
       imagesLoaded();
@@ -292,11 +292,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
       type: "bullets",
       clickable: true,
     },
-    breakpoints: {
-      1024: {
-        autoHeight: false,
-      },
-    },
+    // breakpoints: {
+    //   1024: {
+    //     autoHeight: true,
+    //   },
+    // },
   });
 
   const video = document.querySelector(".promo__video");
@@ -325,58 +325,60 @@ document.addEventListener("DOMContentLoaded", function (event) {
     },
   });
 
-  Fancybox.defaults.Hash = true;
+  // Fancybox.defaults.Hash = true;
+  Fancybox.bind("[data-fancybox]", {
+    Toolbar: {
+      display: [
+        { id: "prev", position: "center" },
+        { id: "counter", position: "center" },
+        { id: "next", position: "center" },
+        "zoom",
+        // "slideshow",
+        "fullscreen",
+        // "download",
+        "thumbs",
+        "close",
+      ],
+    },
+  });
+
+  // Create a new Audio object for each song and attach is as a property of the element
+  // Also add accessibility elements
+  Array.prototype.forEach.call(
+    document.querySelectorAll("[data-song]"),
+    function (song) {
+      // Create a new Audio object for the song
+      song.audio = new Audio(song.href);
+
+      // Add a11y attributes
+      song.setAttribute("role", "button");
+      song.setAttribute("aria-pressed", "false");
+    }
+  );
+
+  document.addEventListener(
+    "click",
+    function (event) {
+      // Ignore clicks on elements that aren't the song link
+      if (!event.target.hasAttribute("data-song")) return;
+
+      // Prevent link default
+      event.preventDefault();
+      document.querySelectorAll("[data-song]").forEach((element) => {
+        element.audio.pause();
+      });
+
+      // If the item is already playing, hit pause
+      if (event.target.getAttribute("aria-pressed") == "true") {
+        event.target.audio.pause();
+        event.target.setAttribute("aria-pressed", "false");
+        return;
+      }
+
+      // Otherwise, play it
+      event.target.audio.play();
+      event.target.setAttribute("aria-pressed", "true");
+    },
+    false
+  );
 });
-
-// Fancybox.getInstance().plugins.Thumbs.state;
-// Fancybox.getInstance().plugins.Thumbs.toggle();
-
-// var videos = document.querySelectorAll(".promo__video"),
-//   fraction = 0.8;
-// function checkScroll() {
-//   for (var i = 0; i < videos.length; i++) {
-//     var video = videos[i];
-
-//     var x = video.offsetLeft,
-//       y = video.offsetTop,
-//       w = video.offsetWidth,
-//       h = video.offsetHeight,
-//       r = x + w, //right
-//       b = y + h, //bottom
-//       visibleX,
-//       visibleY,
-//       visible;
-
-//     visibleX = Math.max(
-//       0,
-//       Math.min(
-//         w,
-//         window.pageXOffset + window.innerWidth - x,
-//         r - window.pageXOffset
-//       )
-//     );
-//     visibleY = Math.max(
-//       0,
-//       Math.min(
-//         h,
-//         window.pageYOffset + window.innerHeight - y,
-//         b - window.pageYOffset
-//       )
-//     );
-
-//     visible = (visibleX * visibleY) / (w * h);
-
-//     if (visible > fraction) {
-//       video.play();
-//     } else {
-//       video.pause();
-//     }
-//   }
-// }
-
-// window.addEventListener("scroll", checkScroll, false);
-// window.addEventListener("resize", checkScroll, false);
-
-// viewer.addHandler("canvas-drag", (event) => {
-//   event.preventDefaultAction = true;
-// });

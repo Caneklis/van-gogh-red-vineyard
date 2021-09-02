@@ -122,9 +122,13 @@
   background-image: url("../images/how-slider-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  border-top: 5px solid #ffce70;
+  border-bottom: 5px solid #ffce70;
 
   @media (max-width: 1023px) {
     background-image: none;
+    border-top: 3px solid #ffce70;
+    border-bottom: 3px solid #ffce70;
   }
 }
 
@@ -201,6 +205,31 @@
   background-repeat: no-repeat;
   background-size: auto;
 
+  &:nth-child(4) {
+    .how__slider-text {
+      ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+
+        li {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    &:nth-child(4) {
+      .how__slider-text {
+        ul {
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          gap: 40px;
+        }
+      }
+    }
+  }
+
   @media (min-width: 1439px) {
     &:nth-child(6) {
       .how__slider-text {
@@ -248,7 +277,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  align-self: center;
   padding-left: 70px;
   position: relative;
 
@@ -403,9 +431,16 @@
 }
 
 .how__slider-video-link {
+  display: block;
+  width: 173px;
+  height: 155px;
   position: absolute;
   bottom: -20%;
   left: 30%;
+  background-image: url("../images/listen-icon.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 
   @media (max-width: 1023px) {
     left: 0;

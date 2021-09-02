@@ -4,9 +4,14 @@
   background-repeat: no-repeat;
   background-size: cover;
   color: #000;
+  border-top: 5px solid #ffce70;
 
   @media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
     background-image: url("../images/about-bg@2x.jpg");
+  }
+
+  @media (max-width: 1023px) {
+    border-top: 3px solid #ffce70;
   }
 }
 
