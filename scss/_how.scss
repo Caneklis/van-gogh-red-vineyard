@@ -266,7 +266,29 @@
     }
 
     &:nth-child(3) {
-      background-size: 277px !important;
+      background-position-x: left !important;
+      background-size: 200px !important;
+    }
+
+    &:nth-child(5) {
+      background-position-x: left !important;
+    }
+
+    &:nth-child(4) {
+      .how__slider-num {
+        img {
+          max-width: 30%;
+        }
+      }
+    }
+
+    &:nth-child(8) {
+      .how__slider-num {
+        img {
+          top: 0;
+          max-width: 30%;
+        }
+      }
     }
   }
 }
@@ -451,7 +473,7 @@
     width: 108px;
     height: 67px;
     bottom: auto;
-    top: 0;
+    top: 10px;
     right: 20px;
     left: auto;
   }

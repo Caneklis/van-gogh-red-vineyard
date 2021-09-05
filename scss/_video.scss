@@ -18,6 +18,11 @@
       background-image: url("../images/video-bg-mobile@2x.jpg");
     }
   }
+
+  @media (max-width: 374px) {
+    background-size: 100%;
+    background-attachment: fixed;
+  }
 }
 
 .video__wrapper {
@@ -39,6 +44,10 @@
     padding-top: 50px;
     padding-bottom: 60px;
     background-image: none;
+  }
+  @media (max-width: 374px) {
+    padding-bottom: 20px;
+    padding-top: 0;
   }
 }
 
