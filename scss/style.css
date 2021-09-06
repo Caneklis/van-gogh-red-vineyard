@@ -2778,6 +2778,10 @@ img {
   background-position: center;
 }
 
+.how__slider-video-link--en {
+  background-image: url("../images/listen-icon-en.svg");
+}
+
 @media (max-width: 1023px) {
   .how__slider-video-link {
     left: 0;

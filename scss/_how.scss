@@ -464,6 +464,10 @@
   background-size: contain;
   background-position: center;
 
+  &--en {
+    background-image: url("../images/listen-icon-en.svg");
+  }
+
   @media (max-width: 1023px) {
     left: 0;
     bottom: -45px;
