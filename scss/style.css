@@ -3552,6 +3552,15 @@ img {
   right: 26.4%;
 }
 
+.series__slider .swiper-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .series__slider .swiper-button-prev,
 .series__slider .swiper-button-next {
   width: auto;

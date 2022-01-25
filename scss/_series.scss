@@ -43,6 +43,11 @@
     right: 26.4%;
   }
 
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+  }
+
   .swiper-button-prev,
   .swiper-button-next {
     width: auto;
